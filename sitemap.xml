@@ -14,12 +14,12 @@
 
     <sitemap>
         <loc>http://zhanghuimeng.github.io/blog-example/category-sitemap.xml</loc>
-        <lastmod>2019-04-03T11:25:25.588Z</lastmod>
+        
     </sitemap>
 
     <sitemap>
         <loc>http://zhanghuimeng.github.io/blog-example/tag-sitemap.xml</loc>
-        <lastmod>2019-04-03T11:06:34.034Z</lastmod>
+        
     </sitemap>
 
 </sitemapindex>
