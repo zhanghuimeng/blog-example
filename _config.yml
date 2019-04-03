@@ -15,7 +15,7 @@ language:
 - zh-TW
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://mxclub.github.io/blog-example
+url: http://zhanghuimeng.github.io/blog-example
 root: /blog-example/
 permalink: :title/
 permalink_defaults:
@@ -72,7 +72,7 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://github.com/mxclub/blog-example.git
+  repo: https://github.com/zhanghuimeng/blog-example.git
   branch: gh-pages
   message: update
 # >> 主题配置 ---------------------------------------------------------------------
