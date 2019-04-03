@@ -1,8 +1,7 @@
-# blog-example
-Example for hexo blog with the theme [Material X](https://xaoxuu.com/wiki/material-x/).
+因为发现install之后会自动更新一些dependency，所以决定新开一个branch。
 
-博客源码：https://github.com/xaoxuu/blog-example/
+待测问题：
 
-在线效果：https://mxclub.github.io/blog-example/
-
-![](https://img.vim-cn.com/52/a54815c02ce232f11f54b2c547c1337828833c.png)
+[] 用excerpt输入摘要不起作用
+[] 在`_config.yml`中注入失败
+[] KaTeX不好使
