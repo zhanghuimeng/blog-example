@@ -4,22 +4,12 @@
 
     <sitemap>
         <loc>http://zhanghuimeng.github.io/blog-example/post-sitemap.xml</loc>
-        <lastmod>2019-04-03T11:29:13.847Z</lastmod>
+        <lastmod>2019-04-03T11:57:06.661Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://zhanghuimeng.github.io/blog-example/page-sitemap.xml</loc>
         <lastmod>2019-04-03T11:06:34.110Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>http://zhanghuimeng.github.io/blog-example/category-sitemap.xml</loc>
-        
-    </sitemap>
-
-    <sitemap>
-        <loc>http://zhanghuimeng.github.io/blog-example/tag-sitemap.xml</loc>
-        
     </sitemap>
 
 </sitemapindex>

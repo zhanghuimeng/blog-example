@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives | Hexo</title>
+  <title>excerpt和description测试 | Hexo</title>
   
+  
+  <meta name="description" content="这是front-matter的description中写的内容">
   
 
   
@@ -188,58 +190,141 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-  <article id="archive-page" class="post article white-box">
-    <section class="archive">
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
       
-          <div class="archive-item archive-year mark">
-            <h2>2019</h2>
+          <h1 class="title">excerpt和description测试</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://zhanghuimeng.github.io/blog-example">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            John Doe
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2019-04-03 星期三
+          </a>
+        </div>
+      
+      
+        
+      
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>这里写了一句话，但是下面没有<code>&lt;!--more--&gt;</code>，所以应该显示摘要，且应该显示front-matter的<code>description</code>中写的内容。</p>
+<p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter" target="_blank" rel="noopener">官方文档 - 页面配置 - Front-matter</a>中说，<code>excerpt</code>是layout=post时特有的字段。</p>
+<p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81" target="_blank" rel="noopener">官方文档 - 页面配置- 文章摘要</a>中说：</p>
+<blockquote>
+<p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>如果还没有，就没有摘要，文章列表会显示全文。</p>
+</blockquote>
+
+      </div>
+        
+          <section class="meta" id="footer-meta">
             <hr>
-          </div>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-03T19:57:00+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    2019-04-03 星期三
+                  </a>
+                </div>
+              
+              
+              
+            </div>
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/blog-example/excerpt-test-2/" rel="prev" title="excerpt测试2">
+                                    
+                                        excerpt测试2
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
       
-          <div class="archive-item archive-post mark">
-            <a href="/blog-example/excerpt-and-description-test/">
-              <time>04-03</time>
-              <span class="title">
-                
-                  excerpt和description测试
-                
-                
-              </span>
-            </a>
-          </div>
       
-          <div class="archive-item archive-post mark">
-            <a href="/blog-example/excerpt-test-2/">
-              <time>04-03</time>
-              <span class="title">
-                
-                  excerpt测试2
-                
-                
-              </span>
-            </a>
-          </div>
       
-          <div class="archive-item archive-post mark">
-            <a href="/blog-example/excerpt-test-1/">
-              <time>04-03</time>
-              <span class="title">
-                
-                  excerpt测试1
-                
-                
-              </span>
-            </a>
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
           </div>
+        </section>
       
     </section>
   </article>
 
 
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
 
-
+<script>
+    window.subData = {
+        title: 'excerpt和description测试',
+        tools: true
+    }
+</script>
 
 
         </div>

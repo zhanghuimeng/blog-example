@@ -8,16 +8,24 @@
     </url>
 
     <url>
-        <loc>http://zhanghuimeng.github.io/blog-example/excerpt-test-2/</loc>
-        <lastmod>2019-04-03T11:29:13.847Z</lastmod>
+        <loc>http://zhanghuimeng.github.io/blog-example/excerpt-test-1/</loc>
+        <lastmod>2019-04-03T11:57:06.661Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://zhanghuimeng.github.io/blog-example/excerpt-test-1/</loc>
-        <lastmod>2019-04-03T11:27:55.941Z</lastmod>
+        <loc>http://zhanghuimeng.github.io/blog-example/excerpt-and-description-test/</loc>
+        <lastmod>2019-04-03T11:57:00.818Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://zhanghuimeng.github.io/blog-example/excerpt-test-2/</loc>
+        <lastmod>2019-04-03T11:29:13.847Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>excerpt和description测试</title>
+      <link href="/blog-example/excerpt-and-description-test/"/>
+      <url>/blog-example/excerpt-and-description-test/</url>
+      
+        <content type="html"><![CDATA[<p>这里写了一句话，但是下面没有<code>&lt;!--more--&gt;</code>，所以应该显示摘要，且应该显示front-matter的<code>description</code>中写的内容。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter" target="_blank" rel="noopener">官方文档 - 页面配置 - Front-matter</a>中说，<code>excerpt</code>是layout=post时特有的字段。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81" target="_blank" rel="noopener">官方文档 - 页面配置- 文章摘要</a>中说：</p><blockquote><p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>如果还没有，就没有摘要，文章列表会显示全文。</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>excerpt测试2</title>
       <link href="/blog-example/excerpt-test-2/"/>
       <url>/blog-example/excerpt-test-2/</url>
@@ -21,7 +34,7 @@
       <link href="/blog-example/excerpt-test-1/"/>
       <url>/blog-example/excerpt-test-1/</url>
       
-        <content type="html"><![CDATA[<p>这里写了一句话，但是下面没有<code>&lt;!--more--&gt;</code>，所以应该显示摘要，且应该显示front-matter的excerpt中写的内容。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter" target="_blank" rel="noopener">官方文档 - 页面配置 - Front-matter</a>中说，<code>excerpt</code>是layout=post时特有的字段。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81" target="_blank" rel="noopener">官方文档 - 页面配置- 文章摘要</a>中说：</p><blockquote><p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>如果还没有，就没有摘要，文章列表会显示全文。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>这里写了一句话，但是下面没有<code>&lt;!--more--&gt;</code>，所以应该显示摘要，且应该显示front-matter的<code>excerpt</code>中写的内容。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter" target="_blank" rel="noopener">官方文档 - 页面配置 - Front-matter</a>中说，<code>excerpt</code>是layout=post时特有的字段。</p><p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81" target="_blank" rel="noopener">官方文档 - 页面配置- 文章摘要</a>中说：</p><blockquote><p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>如果还没有，就没有摘要，文章列表会显示全文。</p></blockquote>]]></content>
       
       
       
