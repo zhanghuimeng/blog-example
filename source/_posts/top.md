@@ -1,6 +1,5 @@
 title: 置顶
 categories: 教程
-top: true
 meta:
   date: false
 valine:
