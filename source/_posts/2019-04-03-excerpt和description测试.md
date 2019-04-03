@@ -1,12 +1,12 @@
 ---
-title: excerpt测试1
-urlname: excerpt-test-1
-date: 2019-04-03 19:18:46
+title: excerpt和description测试
+urlname: excerpt-and-description-test
+date: 2019-04-03 19:55:37
 tags:
-excerpt: 这是front-matter的excerpt中写的内容
+description: 这是front-matter的description中写的内容
 ---
 
-这里写了一句话，但是下面没有`<!--more-->`，所以应该显示摘要，且应该显示front-matter的`excerpt`中写的内容。
+这里写了一句话，但是下面没有`<!--more-->`，所以应该显示摘要，且应该显示front-matter的`description`中写的内容。
 
 [官方文档 - 页面配置 - Front-matter](https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter)中说，`excerpt`是layout=post时特有的字段。
 
