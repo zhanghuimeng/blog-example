@@ -37,7 +37,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -116,7 +116,7 @@ menu:
 widgets:
   - widget: author
     avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/avatar/avatar.png
-    jinrishici: 柳暗花明又一村
+    # jinrishici: 柳暗花明又一村
     social: true
   - widget: plain
     icon: fas fa-bullhorn
