@@ -89,6 +89,7 @@ import:
   - "<link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>"
   - "<link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>"
   - "<link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>"
+  - "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'>"
   # script:
 
 # 导航栏
@@ -209,6 +210,9 @@ valine:
   notify: false # valine mail notify (true/false)
   lang: zh-cn
 
+math:
+  engine: 'mathjax'
+
 # Markdown-it-plus config
 ## Docs: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
 markdown:
@@ -219,7 +223,7 @@ markdown:
   plugins:
     - plugin:
       name: markdown-it-katex
-      enable: false
+      enable: true
     - plugin:
       name: markdown-it-mark
       enable: false
