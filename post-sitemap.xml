@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://zhanghuimeng.github.io/blog-example/environment-and-mathjax-import/</loc>
+        <lastmod>2019-04-04T11:31:50.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://zhanghuimeng.github.io/blog-example/pure-mathjax-test/</loc>
+        <lastmod>2019-04-04T06:58:52.186Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://zhanghuimeng.github.io/blog-example/excerpt-test-1/</loc>
         <lastmod>2019-04-03T11:57:06.661Z</lastmod>
         <changefreq>weekly</changefreq>

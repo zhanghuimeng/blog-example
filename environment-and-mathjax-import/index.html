@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>环境和mathjax导入测试 | Hexo</title>
+  
+  
+
+  
+  <link rel="alternate" href="/blog-example/atom.xml" title="Hexo">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+
+  
+
+  
+  <link rel="stylesheet" href="/blog-example/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="pure"></div>
+</div>
+
+<header class="l_header pure">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/blog-example/">
+        
+          Hexo
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="blog-example" class="nav flat-box" href="/blog-example/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="blog-examplecategories" class="nav flat-box" href="/blog-example/categories/">
+									<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="blog-exampletags" class="nav flat-box" href="/blog-example/tags/">
+									<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="blog-examplearchives" class="nav flat-box" href="/blog-example/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="blog-examplefriends" class="nav flat-box" href="/blog-example/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="blog-exampleabout" class="nav flat-box" href="/blog-example/about/">
+									<i class="fas fa-user fa-fw"></i>&nbsp;关于
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="blog-example" class="nav flat-box" href="/blog-example/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="blog-examplecategories" class="nav flat-box" href="/blog-example/categories/">
+											<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="blog-exampletags" class="nav flat-box" href="/blog-example/tags/">
+											<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="blog-examplearchives" class="nav flat-box" href="/blog-example/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="blog-examplefriends" class="nav flat-box" href="/blog-example/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="blog-exampleabout" class="nav flat-box" href="/blog-example/about/">
+											<i class="fas fa-user fa-fw"></i>&nbsp;关于
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">环境和mathjax导入测试</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://zhanghuimeng.github.io/blog-example">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            John Doe
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-04 星期四
+          </a>
+        </div>
+      
+      
+        
+      
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <h2>我的博客现状</h2>
+<p>我自己的博客目前的状况是这样的：可以纯用mathjax，也可以纯用katex，但是本地显示会崩，推到gh-pages上也会崩。而且因为我用Travis-CI，所以远程环境和自己的环境结果可能还会有差异。</p>
+<a id="more"></a>
+<p><code>package.json</code>如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.7.1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-autoprefixer"</span>: <span class="string">"^2.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.2.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-json-content"</span>: <span class="string">"^3.0.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-search"</span>: <span class="string">"^2.4.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-seo-friendly-sitemap"</span>: <span class="string">"0.0.22"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-helper-qrcode"</span>: <span class="string">"^1.0.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-inject"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-math"</span>: <span class="string">"^3.0.4"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-less"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-markdown-it-plus"</span>: <span class="string">"^1.0.4"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>本地环境如下：</p>
+<ul>
+<li>OS: Windows 10</li>
+<li>node.js: v6.10.2</li>
+<li>npm: 3.10.10</li>
+</ul>
+<p>Travis Server环境如下：</p>
+<ul>
+<li>OS: Ubuntu 14.04.5 LTS</li>
+<li>node.js: v11.13.0</li>
+<li>npm: 6.7.0</li>
+</ul>
+<p>上面的重点可能是我用hexo-renderer-markdown-it-plus渲染markdown（按照<a href="https://www.micdz.cn/article/katex-on-material-x/" target="_blank" rel="noopener">在material-x上使用KaTeX</a>，并且装了hexo-math。</p>
+<h3>纯用mathjax</h3>
+<p>此时（我能想到的）配置（和不配置）内容如下：</p>
+<ul>
+<li>在博客根目录<code>_config.yml</code>中添加</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line"><span class="attr">  engine:</span> <span class="string">'mathjax'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在post的front-matter中添加<code>mathjax: true</code></li>
+<li>在hexo-renderer-markdown-it-plus中禁用<code>markdown-it-katex</code>插件</li>
+</ul>
+<p>此时本地和远程渲染结果相同。</p>
+<p><img src="mathjax-local.png" alt="本地和渲染结果"></p>
+<p>注意到一个事实：公式对应的字符仍然被渲染了，而且，以上面那个<code>r</code>为例，它渲染出来的HTML外层仍然叫<code>katex</code>，整个元素如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex-mathml has-jax has-jax"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"MathJax_Preview"</span> <span class="attr">style</span>=<span class="string">"color: inherit; display: none;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MathJax-Element-1-Frame"</span> <span class="attr">class</span>=<span class="string">"mjx-chtml MathJax_CHTML"</span> <span class="attr">tabindex</span>=<span class="string">"0"</span> <span class="attr">data-mathml</span>=<span class="string">"&lt;math xmlns=&amp;quot;http://www.w3.org/1998/Math/MathML&amp;quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&amp;quot;application/x-tex&amp;quot;&gt;      r&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;"</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">style</span>=<span class="string">"font-size: 115%; position: relative;"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MJXc-Node-1"</span> <span class="attr">class</span>=<span class="string">"mjx-math"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MJXc-Node-2"</span> <span class="attr">class</span>=<span class="string">"mjx-mrow"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MJXc-Node-3"</span> <span class="attr">class</span>=<span class="string">"mjx-semantics"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MJXc-Node-4"</span> <span class="attr">class</span>=<span class="string">"mjx-mrow"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"MJXc-Node-5"</span> <span class="attr">class</span>=<span class="string">"mjx-mi"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"mjx-char MJXc-TeX-math-I"</span> <span class="attr">style</span>=<span class="string">"padding-top: 0.22em; padding-bottom: 0.274em;"</span>&gt;</span>r<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"MJX_Assistive_MathML"</span> <span class="attr">role</span>=<span class="string">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="name">math</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1998/Math/MathML"</span>&gt;</span><span class="tag">&lt;<span class="name">semantics</span>&gt;</span><span class="tag">&lt;<span class="name">mrow</span>&gt;</span><span class="tag">&lt;<span class="name">mi</span>&gt;</span>r<span class="tag">&lt;/<span class="name">mi</span>&gt;</span><span class="tag">&lt;/<span class="name">mrow</span>&gt;</span><span class="tag">&lt;<span class="name">annotation</span> <span class="attr">encoding</span>=<span class="string">"application/x-tex"</span>&gt;</span>      r<span class="tag">&lt;/<span class="name">annotation</span>&gt;</span><span class="tag">&lt;/<span class="name">semantics</span>&gt;</span><span class="tag">&lt;/<span class="name">math</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"math/mml"</span> <span class="attr">id</span>=<span class="string">"MathJax-Element-1"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">math</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">semantics</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">mrow</span>&gt;</span></span></span><br><span class="line"><span class="xml">                        <span class="tag">&lt;<span class="name">mi</span>&gt;</span>r<span class="tag">&lt;/<span class="name">mi</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;/<span class="name">mrow</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">annotation</span> <span class="attr">encoding</span>=<span class="string">"application/x-tex"</span>&gt;</span>r<span class="tag">&lt;/<span class="name">annotation</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;/<span class="name">semantics</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">math</span>&gt;</span></span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex-html"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"base"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"strut"</span> <span class="attr">style</span>=<span class="string">"height:0.43056em;vertical-align:0em;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"mord mathdefault"</span> <span class="attr">style</span>=<span class="string">"margin-right:0.02778em;"</span>&gt;</span>r<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以及我建议作者把<code>mathjax.ejs</code>里的那句<code>console.log(&quot;mathjax did loaded!&quot;);</code>删掉，不然有时候一打开网页就出来三百多条log，令人很困惑。。。</p>
+<h3>纯用KaTeX</h3>
+<p>我大胆猜测KaTeX是全局引用的（毕竟是放到renderer里面了……）。因此，为了防止mathjax被用到，我进行了以下配置：</p>
+<ul>
+<li>在博客根目录<code>_config.yml</code>中添加</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line"><span class="attr">  engine:</span> <span class="string">'katex'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在post的front-matter中添加<code>mathjax: false</code>（不过好像保持为<code>true</code>也没有什么风险）</li>
+<li>在hexo-renderer-markdown-it-plus中启用<code>markdown-it-katex</code>插件</li>
+<li>引入最新版KaTeX CSS：</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">import:</span></span><br><span class="line"><span class="attr">  link:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"&lt;link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'&gt;"</span></span><br></pre></td></tr></table></figure>
+<p>此时本地和远程渲染结果也相同：</p>
+<p><img src="katex-local.png" alt="katex渲染效果"></p>
+<p>此时渲染出来的HTML看起来变简洁了：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex-mathml"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">math</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">semantics</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mrow</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">mi</span>&gt;</span>r<span class="tag">&lt;/<span class="name">mi</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">mrow</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">annotation</span> <span class="attr">encoding</span>=<span class="string">"application/x-tex"</span>&gt;</span>r<span class="tag">&lt;/<span class="name">annotation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">semantics</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">math</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"katex-html"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"base"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"strut"</span> <span class="attr">style</span>=<span class="string">"height:0.43056em;vertical-align:0em;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"mord mathdefault"</span> <span class="attr">style</span>=<span class="string">"margin-right:0.02778em;"</span>&gt;</span>r<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2>为什么会出现问题？</h2>
+<p>几种猜测：</p>
+<ul>
+<li>MathJax版本为2.7.1，太旧了（×）
+<ul>
+<li>也不是没有这种可能。</li>
+</ul>
+</li>
+<li>本地nodejs和npm的版本太旧了（×）
+<ul>
+<li>但是远程渲染也有问题。</li>
+</ul>
+</li>
+<li>hexo-renderer-markdown-it-plus默认包含KaTeX，和MathJax不兼容（？）
+<ul>
+<li>这也许可以解释为什么渲染出来都是<code>katex-block</code></li>
+<li>不过KaTeX自己居然也渲染不好……</li>
+</ul>
+</li>
+<li>hexo-renderer-markdown-it-plus这个渲染器有问题（√）
+<ul>
+<li>很有可能。也许我应该换一个渲染器</li>
+</ul>
+</li>
+<li>作者的有些CSS设置和MathJax冲突了（×）
+<ul>
+<li>网上好像有过这样的说法。</li>
+</ul>
+</li>
+<li>博客的<code>_config.yml</code>中设置的math engine和renderer冲突了（×）
+<ul>
+<li>令人深思的想法</li>
+</ul>
+</li>
+<li>博客安装的包之间有冲突</li>
+</ul>
+<h2>实验材料</h2>
+<p>相关文段如下（备用）：</p>
+<p>我们重新考虑一下半径的问题。以半径$r$作为随机变量，则随机点落在$r$范围内的概率分布为</p>
+<p>$$\text{CDF}(r) = \frac{r^2}{R^2}$$</p>
+<p>$$\text{PDF}(r) = \frac{d}{dr} \text{CDF}(r) = \frac{2r}{R^2}$$</p>
+<p>以<code>[0, 1]</code>均匀分布对$\text{CDF}(r)$进行随机，则有$r = R \sqrt{\text{rand}()}$。</p>
+<h2>实验1：hexo-renderer-marked + mathjax（默认配置）</h2>
+<p>此时同样的公式显示没有任何问题：</p>
+<p><img src="test1.png" alt="看到正确的公式渲染，真欣慰……"></p>
+<p>结论：作者写的应该没什么问题。</p>
+<hr>
+<p>package.json：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.8.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-autoprefixer"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.2.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-json-content"</span>: <span class="string">"^3.0.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-search"</span>: <span class="string">"^2.4.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-seo-friendly-sitemap"</span>: <span class="string">"0.0.22"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-helper-qrcode"</span>: <span class="string">"^1.0.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-lazyload-image"</span>: <span class="string">"^1.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-related-popular-posts"</span>: <span class="string">"^3.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-less"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-marked"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>_config.yml</code>中没有关于mathjax的特殊配置。</p>
+<h2>实验2：hexo-renderer-markdown-it-plus</h2>
+<p>卸载hexo-renderer-marked，安装<a href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus" target="_blank" rel="noopener">hexo-renderer-markdown-it-plus</a>。</p>
+<h3>实验2.1：hexo-renderer-markdown-it-plus + mathjax</h3>
+<p>在配置文件中disable KaTeX（但不加入关于math engine的配置），如上文。其余配置不变。</p>
+<p><img src="test2.png" alt="渲染挂了，而且挂得和之前一样"></p>
+<p>发现渲染挂了，而且挂得和之前一样。</p>
+<p>结论：hexo-renderer-markdown-it-plus会直接导致mathjax渲染出问题。</p>
+<h3>实验2.2：hexo-renderer-markdown-it-plus + katex</h3>
+<p>在配置文件中enable KaTeX（但不加入关于math engine的配置），并引入最新版KaTeX CSS，如上文。其余配置不变。</p>
+<p><img src="markdown-it-plus-test2.png" alt="出现了一点错位"></p>
+<p>发现渲染出现了一点错位，不过比我的博客中出现的状况要好一点。</p>
+<p>而且我发现此主题中，MathJaX渲染的公式会带个灰色的底，KaTex渲染的则不会。</p>
+<p>是否配置math engine对结果没有影响。</p>
+<p>结论：hexo-renderer-markdown-it-plus的katex渲染可能也有问题。</p>
+<hr>
+<p>package.json：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.8.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-autoprefixer"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.2.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-json-content"</span>: <span class="string">"^3.0.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-search"</span>: <span class="string">"^2.4.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-seo-friendly-sitemap"</span>: <span class="string">"0.0.22"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-helper-qrcode"</span>: <span class="string">"^1.0.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-lazyload-image"</span>: <span class="string">"^1.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-related-popular-posts"</span>: <span class="string">"^3.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-less"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-markdown-it-plus"</span>: <span class="string">"^1.0.4"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">```yml</span></span><br><span class="line"><span class="attr">import:</span></span><br><span class="line"><span class="attr">  link:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"&lt;link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'&gt;"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  plugins:</span></span><br><span class="line"><span class="attr">    - plugin:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">markdown-it-katex</span></span><br><span class="line"><span class="attr">      enable:</span> <span class="literal">true</span><span class="string">/false</span></span><br><span class="line"><span class="attr">    - plugin:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">markdown-it-mark</span></span><br><span class="line"><span class="attr">      enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2>实验3：hexo-renderer-markdown-it</h2>
+<p>卸载hexo-renderer-marked，安装<a href="https://github.com/hexojs/hexo-renderer-markdown-it" target="_blank" rel="noopener">hexo-renderer-markdown-it</a>。</p>
+<p>之前我用的就是这个renderer，因为它自带footnote功能。（但是它似乎无法生成TOC位置anchor，所以文章目录的链接点不动）它并没有自带KaTeX。不过我也没有特意测试过它的公式显示效果。</p>
+<p>配置mathjax为math engine。（虽然写katex也是一样的）</p>
+<p><img src="markdown-it-test1.png" alt="公式显示正常"></p>
+<p>发现公式显示是正常的。</p>
+<p>在这个renderer上自己加katex实在比较麻烦，我懒得试了。</p>
+<p>结论：hexo-renderer-markdown-it-plus加katex加出锅来了。</p>
+<hr>
+<p>package.json：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.8.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-autoprefixer"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.2.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-json-content"</span>: <span class="string">"^3.0.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-search"</span>: <span class="string">"^2.4.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-seo-friendly-sitemap"</span>: <span class="string">"0.0.22"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-helper-qrcode"</span>: <span class="string">"^1.0.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-lazyload-image"</span>: <span class="string">"^1.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-related-popular-posts"</span>: <span class="string">"^3.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-less"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-markdown-it"</span>: <span class="string">"^3.4.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line"><span class="attr">  engine:</span> <span class="string">'mathjax'</span><span class="string">/'katex'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  plugins:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-footnote</span></span><br></pre></td></tr></table></figure>
+
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-04T19:31:50+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-save" aria-hidden="true"></i>
+                    2019-04-04 星期四
+                  </a>
+                </div>
+              
+              
+              
+            </div>
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/blog-example/pure-mathjax-test/" rel="prev" title="mathjax测试">
+                                    
+                                        mathjax测试
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+
+<script>
+    window.subData = {
+        title: '环境和mathjax导入测试',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content pure">
+    
+      <div class="avatar">
+        <img class="avatar" src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/avatar/avatar.png">
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/blog-example/atom.xml" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-rss" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="mailto:me@xaoxuu.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/xaoxuu" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=63035382" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-headphones-alt" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="pure">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com/wiki/material-x/" title="https://xaoxuu.com/wiki/material-x/">
+    <i class="fas fa-question-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class="content pure">
+    <p>本站使用 <a href="https://xaoxuu.com/wiki/material-x/">Material X</a> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com/projects/" title="https://xaoxuu.com/projects/">
+    <i class="fas fa-arrow-right fa-fw"></i></a>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/heartmate/" href="https://xaoxuu.com/heartmate/">
+          <div class="name">
+            
+              <i class="fas fa-heartbeat fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;HeartMate
+          </div>
+          
+            <div class="badge">(iOS应用程序)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/">
+          <div class="name">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/%E7%9C%9F%E6%A3%92.png">
+            
+            &nbsp;&nbsp;Material X
+          </div>
+          
+            <div class="badge">(Hexo博客主题)</div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/about/" href="https://xaoxuu.com/about/">
+          <div class="name">
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        
+
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com" href="https://xaoxuu.com">
+          <div class="name">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/avatar/avatar.png" id="round">
+            
+            &nbsp;&nbsp;xaoxuu's blog
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="toc-wrapper">
+    
+<header class="pure">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content pure">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">我的博客现状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用KaTeX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">为什么会出现问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验材料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验1：hexo-renderer-marked + mathjax（默认配置）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验2：hexo-renderer-markdown-it-plus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.1：hexo-renderer-markdown-it-plus + mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.2：hexo-renderer-markdown-it-plus + katex</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验3：hexo-renderer-markdown-it</span></a></li></ol>
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/blog-example/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="mailto:me@xaoxuu.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/xaoxuu" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=63035382" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/blog-example/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz",
+    appKey: "EAyPrjSfiYnuRDiIpwczBeJ4",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:''
+  })
+  </script>
+
+
+
+
+  <script src="/blog-example/js/app.js"></script>
+<script src="/blog-example/js/search.js"></script>
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

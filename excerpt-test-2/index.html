@@ -24,6 +24,7 @@
   
 
   <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
@@ -35,6 +36,7 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
   <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
   <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
   
 
   
@@ -58,8 +60,7 @@
   <div id="loading-bar" class="pure"></div>
 </div>
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header pure">
+<header class="l_header pure">
 	<div class="wrapper">
 		<div class="nav-main container container--flex">
       <a class="logo flat-box" href="/blog-example/">
@@ -212,7 +213,7 @@
       
         <div class="new-meta-item date">
           <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
             2019-04-03 星期三
           </a>
         </div>
@@ -245,7 +246,9 @@
 <p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#Front-matter" target="_blank" rel="noopener">官方文档 - 页面配置 - Front-matter</a>中说，<code>excerpt</code>是layout=post时特有的字段。</p>
 <p><a href="https://xaoxuu.com/wiki/material-x/front-matter/index.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81" target="_blank" rel="noopener">官方文档 - 页面配置- 文章摘要</a>中说：</p>
 <blockquote>
-<p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>如果还没有，就没有摘要，文章列表会显示全文。</p>
+<p>第一优先级是寻找正文中的<code>&lt;!--more--&gt;</code>，其前面的为摘要，可以显示在文章列表中，后面的是正文。<br>
+如果没有，则寻找Front-matter中的<code>excerpt</code>字段，以其为摘要。<br>
+如果还没有，就没有摘要，文章列表会显示全文。</p>
 </blockquote>
 
       </div>
@@ -256,7 +259,7 @@
               
                 <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-03T19:29:13+08:00">
                   <a class="notlink">
-                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    <i class="fas fa-save" aria-hidden="true"></i>
                     2019-04-03 星期三
                   </a>
                 </div>
@@ -355,15 +358,6 @@
         <img class="avatar" src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/avatar/avatar.png">
       </div>
     
-    
-      <div class="text">
-        
-        
-        
-          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
     
     
       <div class="social-wrapper">
@@ -619,77 +613,185 @@
   </script>
 
 
-  
-    <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        const $reveal = $('.reveal');
-    		if ($reveal.length === 0) return;
-    		const sr = ScrollReveal({ distance: 0 });
-    		sr.reveal('.reveal');
-      });
-    </script>
-  
-  
-    <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        Waves.attach('.flat-btn', ['waves-button']);
-        Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-        Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-        Waves.attach('.flat-box', ['waves-block']);
-        Waves.attach('.float-box', ['waves-block', 'waves-float']);
-        Waves.attach('.waves-image');
-        Waves.init();
-      });
-    </script>
-  
-  
-    <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-  
-  
-  
 
-  
-  
-  
-  
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    
-      
-        <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
-      
-    
-    <script>
-    var GUEST_INFO = ['nick','mail','link'];
-    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-      return GUEST_INFO.indexOf(item) > -1
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
     });
-    var notify = 'false' == true;
-    var verify = 'false' == true;
-    var valine = new Valine();
-    valine.init({
-      el: '#valine_container',
-      notify: notify,
-      verify: verify,
-      guest_info: guest_info,
-      
-      appId: "1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz",
-      appKey: "EAyPrjSfiYnuRDiIpwczBeJ4",
-      placeholder: "快来评论吧~",
-      pageSize:'10',
-      avatar:'mp',
-      lang:'zh-cn',
-      highlight:''
-    })
-    </script>
-  
+  </script>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
-    <script src="/blog-example/js/app.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz",
+    appKey: "EAyPrjSfiYnuRDiIpwczBeJ4",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:''
+  })
+  </script>
+
+
+
+
+  <script src="/blog-example/js/app.js"></script>
 <script src="/blog-example/js/search.js"></script>
-  
 
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
 
 
 
