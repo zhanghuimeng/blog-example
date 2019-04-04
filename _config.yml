@@ -213,17 +213,12 @@ valine:
 math:
   engine: 'mathjax'
 
-# Markdown-it-plus config
-## Docs: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
   render:
     html: true
     breaks: true
     linkify: true
   plugins:
-    - plugin:
-      name: markdown-it-katex
-      enable: true
-    - plugin:
-      name: markdown-it-mark
-      enable: false
+    - markdown-it-footnote
