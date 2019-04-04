@@ -258,7 +258,7 @@
 <li>node.js: v11.13.0</li>
 <li>npm: 6.7.0</li>
 </ul>
-<p>上面的重点可能是我用hexo-renderer-markdown-it-plus渲染markdown（按照<a href="https://www.micdz.cn/article/katex-on-material-x/" target="_blank" rel="noopener">在material-x上使用KaTeX</a>，并且装了hexo-math。</p>
+<p>上面的重点可能是我用hexo-renderer-markdown-it-plus渲染markdown（按照<a href="https://www.micdz.cn/article/katex-on-material-x/" target="_blank" rel="noopener">在material-x上使用KaTeX</a>一文中提到的方法，并且装了hexo-math）。</p>
 <h3>纯用mathjax</h3>
 <p>此时（我能想到的）配置（和不配置）内容如下：</p>
 <ul>
@@ -324,7 +324,7 @@
 <li>令人深思的想法</li>
 </ul>
 </li>
-<li>博客安装的包之间有冲突</li>
+<li>博客安装的包之间有冲突（？）</li>
 </ul>
 <h2>实验材料</h2>
 <p>相关文段如下（备用）：</p>
@@ -372,6 +372,17 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.8.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-autoprefixer"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.2.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-json-content"</span>: <span class="string">"^3.0.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-search"</span>: <span class="string">"^2.4.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-seo-friendly-sitemap"</span>: <span class="string">"0.0.22"</span>,</span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-helper-qrcode"</span>: <span class="string">"^1.0.2"</span>,</span><br><span class="line">    <span class="attr">"hexo-lazyload-image"</span>: <span class="string">"^1.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-related-popular-posts"</span>: <span class="string">"^3.0.3"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-less"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-markdown-it"</span>: <span class="string">"^3.4.1"</span>,</span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>_config.yml</code>：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line"><span class="attr">  engine:</span> <span class="string">'mathjax'</span><span class="string">/'katex'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  plugins:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">markdown-it-footnote</span></span><br></pre></td></tr></table></figure>
+<h2>实验4：hexo-renderer-markdown-it + 我自己的博客</h2>
+<p>我居然忘了当初hexo-renderer-markdown-it在我自己博客上公式出了啥问题了。于是我换成hexo-renderer-markdown-it，结果连编译都编译不了，hexo-generator-feed插件出问题。在网上四处查了一圈，据说是npm和nodejs版本太低了（确实低）。然后我就升级了npm，结果还是不行，于是我就干脆把这插件先给删了。</p>
+<p>最后我发现我忘了安装renderer了，所以什么都没渲染出来，de了半天bug，发现忘了改config了。</p>
+<hr>
+<p>最后我发现我自己用回hexo-renderer-markdown-it之后，公式一点毛病都没有了，好得很，除了TOC点不动以外没什么大毛病。我很困惑，不过就先这样吧。</p>
+<p>（hexo-renderer-markdown-it和hexo-renderer-markdown-it-plus能不能中和一下？？？）</p>
+<h2>一些测不动了的东西</h2>
+<p>我猜即使安装了hexo-math也不能就让hexo-renderer-markdown-it用katex进行渲染，所以就懒得试了。</p>
+<p>不知道hexo-renderer-pandoc怎么样。</p>
+<p>我大胆猜测各npm插件之间没有冲突。</p>
+<p>……</p>
 
       </div>
         
@@ -379,7 +390,7 @@
             <hr>
             <div class="new-meta-box">
               
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-04T19:31:50+08:00">
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-04T20:44:50+08:00">
                   <a class="notlink">
                     <i class="fas fa-save" aria-hidden="true"></i>
                     2019-04-04 星期四
@@ -709,7 +720,7 @@
 </header>
 
     <div class="content pure">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">我的博客现状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用KaTeX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">为什么会出现问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验材料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验1：hexo-renderer-marked + mathjax（默认配置）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验2：hexo-renderer-markdown-it-plus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.1：hexo-renderer-markdown-it-plus + mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.2：hexo-renderer-markdown-it-plus + katex</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验3：hexo-renderer-markdown-it</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">我的博客现状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">纯用KaTeX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">为什么会出现问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验材料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验1：hexo-renderer-marked + mathjax（默认配置）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验2：hexo-renderer-markdown-it-plus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.1：hexo-renderer-markdown-it-plus + mathjax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">实验2.2：hexo-renderer-markdown-it-plus + katex</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验3：hexo-renderer-markdown-it</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">实验4：hexo-renderer-markdown-it + 我自己的博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">一些测不动了的东西</span></a></li></ol>
     </div>
   </section>
 
