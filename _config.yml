@@ -208,3 +208,18 @@ valine:
   verify: false # valine verify code (true/false)
   notify: false # valine mail notify (true/false)
   lang: zh-cn
+
+# Markdown-it-plus config
+## Docs: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
+markdown:
+  render:
+    html: true
+    breaks: true
+    linkify: true
+  plugins:
+    - plugin:
+      name: markdown-it-katex
+      enable: false
+    - plugin:
+      name: markdown-it-mark
+      enable: false
