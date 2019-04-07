@@ -75,6 +75,11 @@ deploy:
   repo: https://github.com/zhanghuimeng/blog-example.git
   branch: gh-pages
   message: update
+
+# hexo-sage-posts
+sage_posts:
+  filter: hidden    # Change the filter name to fit your need
+
 # >> 主题配置 ---------------------------------------------------------------------
 
 # 全局导入
