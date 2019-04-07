@@ -36,6 +36,7 @@
   <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>
   <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>
   <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'>
   
 
   
@@ -250,59 +251,58 @@
 <a id="more"></a>
 <p>转义冲突的问题通常可以通过应用<code> ... </code>标签解决，虽然这不一定是个好方法。</p>
 <p>很显然，有些问题无法直接这么解决。</p>
-<h2 id="使用的渲染器"><a class="markdownIt-Anchor" href="#使用的渲染器"></a> 使用的渲染器</h2>
-<h3 id="hexo-renderer-marked"><a class="markdownIt-Anchor" href="#hexo-renderer-marked"></a> hexo-renderer-marked</h3>
+<h2>使用的渲染器</h2>
+<h3>hexo-renderer-marked</h3>
 <p>npm：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo-renderer-marked@<span class="number">0.3</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
 <p>额外配置：无</p>
-<h2 id="简单行内公式"><a class="markdownIt-Anchor" href="#简单行内公式"></a> 简单行内公式</h2>
-<h3 id="源代码"><a class="markdownIt-Anchor" href="#源代码"></a> 源代码</h3>
+<h2>简单行内公式</h2>
+<h3>源代码</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$a$</span><br></pre></td></tr></table></figure>
-<h3 id="显示结果"><a class="markdownIt-Anchor" href="#显示结果"></a> 显示结果</h3>
+<h3>显示结果</h3>
 <p>直接渲染：</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></p>
+<p>$a$</p>
 <p>加tag后渲染：</p>
 
 $a$
 
-<h4 id="hexo-renderer-marked-2"><a class="markdownIt-Anchor" href="#hexo-renderer-marked-2"></a> hexo-renderer-marked</h4>
+<h4>hexo-renderer-marked</h4>
 <p><img src="simple-inline-marked.png" alt="没有什么问题"></p>
-<h2 id="换行渲染测试"><a class="markdownIt-Anchor" href="#换行渲染测试"></a> 换行渲染测试</h2>
+<h2>换行渲染测试</h2>
 <p>一般的markdown渲染器都会将<code>\\</code>转义为<code>\</code>，因此在公式中用<code>\\</code>换行是无效的。一种愚蠢的解决方法是打四个<code>\</code>。稍好的解决方法是使用<code> ... </code>。</p>
-<h3 id="源代码-2"><a class="markdownIt-Anchor" href="#源代码-2"></a> 源代码</h3>
+<h3>源代码</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;eqnarray&#125;</span><br><span class="line">\nabla\cdot\vec&#123;E&#125; &amp;=&amp; \frac&#123;\rho&#125;&#123;\epsilon_0&#125; \\</span><br><span class="line">\nabla\cdot\vec&#123;B&#125; &amp;=&amp; 0 \\</span><br><span class="line">\nabla\times\vec&#123;E&#125; &amp;=&amp; -\frac&#123;\partial B&#125;&#123;\partial t&#125; \\</span><br><span class="line">\nabla\times\vec&#123;B&#125; &amp;=&amp; \mu_0\left(\vec&#123;J&#125;+\epsilon_0\frac&#123;\partial E&#125;&#123;\partial t&#125; \right)</span><br><span class="line">\end&#123;eqnarray&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<h3 id="显示结果-2"><a class="markdownIt-Anchor" href="#显示结果-2"></a> 显示结果</h3>
-<p class="katex-block katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
-\nabla\cdot\ve…">\begin{eqnarray}
-\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \\
-\nabla\cdot\vec{B} &amp;=&amp; 0 \\
-\nabla\times\vec{E} &amp;=&amp; -\frac{\partial B}{\partial t} \\
-\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)
-\end{eqnarray}
-</p>
-<h4 id="hexo-renderer-marked-3"><a class="markdownIt-Anchor" href="#hexo-renderer-marked-3"></a> hexo-renderer-marked</h4>
+<h3>显示结果</h3>
+<p>$$<br>
+\begin{eqnarray}<br>
+\nabla\cdot\vec{E} &amp;=&amp; \frac{\rho}{\epsilon_0} \<br>
+\nabla\cdot\vec{B} &amp;=&amp; 0 \<br>
+\nabla\times\vec{E} &amp;=&amp; -\frac{\partial B}{\partial t} \<br>
+\nabla\times\vec{B} &amp;=&amp; \mu_0\left(\vec{J}+\epsilon_0\frac{\partial E}{\partial t} \right)<br>
+\end{eqnarray}<br>
+$$</p>
+<h4>hexo-renderer-marked</h4>
 <p>换行渲染挂了。</p>
-<h2 id="下划线渲染测试"><a class="markdownIt-Anchor" href="#下划线渲染测试"></a> 下划线渲染测试</h2>
-<h3 id="源代码-3"><a class="markdownIt-Anchor" href="#源代码-3"></a> 源代码</h3>
+<h2>下划线渲染测试</h2>
+<h3>源代码</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$R_&#123;m \times n&#125; = U_&#123;m\times m&#125;S_&#123;m \times n&#125;V_&#123;n \times n&#125;$$</span><br></pre></td></tr></table></figure>
-<h3 id="显示结果-3"><a class="markdownIt-Anchor" href="#显示结果-3"></a> 显示结果</h3>
+<h3>显示结果</h3>
 <ul>
 <li>$E_{in} \thickapprox E_{out} $</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>≈</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">E_{in} \thickapprox 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel amsrm">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
+<li>$E_{in} \thickapprox 0$</li>
 </ul>
-<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>U</mi><mrow><mi>m</mi><mo>×</mo><mi>m</mi></mrow></msub><msub><mi>S</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><msubsup><mi>V</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><mo mathvariant="normal">′</mo></msubsup></mrow><annotation encoding="application/x-tex">R_{m \times n} = U_{m\times m}S_{m \times n}V_{n \times n}&#x27;
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.891661em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.107223em;vertical-align:-0.305331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-2.4530000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.305331em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>U</mi><mrow><mi>m</mi><mo>×</mo><mi>m</mi></mrow></msub><msub><mi>S</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><msubsup><mi>V</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><mo mathvariant="normal">′</mo></msubsup></mrow><annotation encoding="application/x-tex">R_{m \times n} = U_{m\times m}S_{m \times n}V_{n \times n}&#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.891661em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.057223em;vertical-align:-0.305331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.4530000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.305331em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h4 id="hexo-renderer-marked-4"><a class="markdownIt-Anchor" href="#hexo-renderer-marked-4"></a> hexo-renderer-marked</h4>
-<h2 id="双花括号测试"><a class="markdownIt-Anchor" href="#双花括号测试"></a> 双花括号测试</h2>
+<p>$$R_{m \times n} = U_{m\times m}S_{m \times n}V_{n \times n}'$$</p>
+<p>$R_{m \times n} = U_{m\times m}S_{m \times n}V_{n \times n}'$</p>
+<h4>hexo-renderer-marked</h4>
+<h2>双花括号测试</h2>
 <p>似乎hexo-renderer-marked不能正常处理双花括号。</p>
-<h3 id="源代码-4"><a class="markdownIt-Anchor" href="#源代码-4"></a> 源代码</h3>
+<h3>源代码</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\frac&#123;1&#125;&#123;&#123;(2\pi)&#125;^\frac&#123;D&#125;&#123;2&#125;&#125;$$</span><br></pre></td></tr></table></figure>
-<h3 id="显示结果-4"><a class="markdownIt-Anchor" href="#显示结果-4"></a> 显示结果</h3>
-<p>// –</p>
-<h4 id="hexo-renderer-marked-5"><a class="markdownIt-Anchor" href="#hexo-renderer-marked-5"></a> hexo-renderer-marked</h4>
+<h3>显示结果</h3>
+<p>// --</p>
+<h4>hexo-renderer-marked</h4>
 <p>博客完全无法编译，会报错。</p>
-<h2 id="渲染器总结"><a class="markdownIt-Anchor" href="#渲染器总结"></a> 渲染器总结</h2>
+<h2>渲染器总结</h2>
 <ul>
 <li>hexo-renderer-marked
 <ul>
@@ -311,7 +311,7 @@ $a$
 </ul>
 </li>
 </ul>
-<h2 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h2>
+<h2>参考文献</h2>
 <ul>
 <li><a href="https://www.jianshu.com/p/a9f26f4cd4e6" target="_blank" rel="noopener">简书 - Hexo中的LaTex公式渲染问题</a></li>
 </ul>
@@ -322,10 +322,10 @@ $a$
             <hr>
             <div class='new-meta-box'>
               
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-04T14:58:52+08:00">
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-07T22:28:32+08:00">
                   <a class='notlink'>
                     <i class="fas fa-save" aria-hidden="true"></i>
-                    2019-04-04 星期四
+                    2019-04-07 星期日
                   </a>
                 </div>
               
@@ -527,6 +527,18 @@ $a$
       
       
         
+  <section class='tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/blog-example/tags/Test/" style="font-size: 14px; color: #999">Test</a>
+    </div>
+  </section>
+
 
       
     
@@ -673,7 +685,7 @@ $a$
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用的渲染器"><span class="toc-text"> 使用的渲染器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-renderer-marked"><span class="toc-text"> hexo-renderer-marked</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单行内公式"><span class="toc-text"> 简单行内公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源代码"><span class="toc-text"> 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示结果"><span class="toc-text"> 显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-renderer-marked-2"><span class="toc-text"> hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换行渲染测试"><span class="toc-text"> 换行渲染测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源代码-2"><span class="toc-text"> 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示结果-2"><span class="toc-text"> 显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-renderer-marked-3"><span class="toc-text"> hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下划线渲染测试"><span class="toc-text"> 下划线渲染测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源代码-3"><span class="toc-text"> 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示结果-3"><span class="toc-text"> 显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-renderer-marked-4"><span class="toc-text"> hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双花括号测试"><span class="toc-text"> 双花括号测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源代码-4"><span class="toc-text"> 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示结果-4"><span class="toc-text"> 显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-renderer-marked-5"><span class="toc-text"> hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渲染器总结"><span class="toc-text"> 渲染器总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-text"> 参考文献</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">使用的渲染器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">hexo-renderer-marked</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">简单行内公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">换行渲染测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">下划线渲染测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">双花括号测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">显示结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">hexo-renderer-marked</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">渲染器总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">参考文献</span></a></li></ol>
     </div>
   </section>
 

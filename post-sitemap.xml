@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>http://zhanghuimeng.github.io/blog-example/environment-and-mathjax-import/</loc>
-        <lastmod>2019-04-04T13:10:52.984Z</lastmod>
+        <loc>http://zhanghuimeng.github.io/blog-example/hexo-sage-posts-test/</loc>
+        <lastmod>2019-04-07T14:34:03.886Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>http://zhanghuimeng.github.io/blog-example/pure-mathjax-test/</loc>
-        <lastmod>2019-04-04T06:58:52.186Z</lastmod>
+        <lastmod>2019-04-07T14:28:32.377Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://zhanghuimeng.github.io/blog-example/environment-and-mathjax-import/</loc>
+        <lastmod>2019-04-04T13:10:52.984Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
